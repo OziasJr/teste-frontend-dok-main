@@ -1,9 +1,92 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
     outline: none;
 }
 
+body, p, h1, h2, h3, h6, ul, li, hr {
+    padding: 0;
+    margin: 0;
+}
+
+div.estrutura {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "header header"
+        "main main"
+    ;
+}
+
+header {
+    background-image: url('../images/carros_avenida.png');
+    padding: 30px;
+    margin: 0 auto;
+    background-size: cover;
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row: span 2;
+    grid-gap: 30px;
+}
+
+header > img.foto {
+    grid-column: 1 / 1;
+    grid-row: span 2;
+}
+
+header > img.logo_dok {
+    grid-column: 2 / 2;
+    grid-row: span 1;
+}
+
+header > h1 {
+    grid-column: 2 / 2;
+    grid-row: span 1;
+}
+
+main {
+    grid-area: main;
+    margin: 0 auto;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row: span 1;
+    grid-gap: 30px;
+}
+
+main div.afiliado {
+    background-color: rgb(209, 8, 8);
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    grid-column: 1 / -1;
+    grid-row: span 1;
+    grid-gap: 30px;
+    padding: 30px;
+}
+
+main > div > div.embed-responsive {
+    grid-column: 1 / 1;
+    grid-row: span 1;
+}
+
+main > div > form.form {
+    grid-column: 2 / 2;
+    grid-row: span 1;
+}
+
+
+/* .main {
+    grid-area: main;
+    margin: 0 auto;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+}
+
+.col-wide {
+    grid-column: 1 / -1;
+}
+ */
